@@ -1,6 +1,6 @@
 Chosen Select Widget for Yii 2
 =========
-- Chosen Select Widget based on Chosen jQuery plugin http://harvesthq.github.io/chosen
+- Chosen Select Widget based on Chosen jQuery plugin [chosen](http://harvesthq.github.io/chosen)
 
 
 Installation
