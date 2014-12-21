@@ -24,3 +24,26 @@ to the require section of your composer.json.
 
 Usage
 ------------
+```php
+// Render form select:
+   echo $form->field($model, 'subject')->widget(\yii2mod\chosen\ChosenSelect::className(),[
+                    'items' => [
+                        'first' => 'First',
+                        'second' => 'Second'
+                    ],
+                ]); 
+
+                
+// Render default select
+   echo \yii2mod\chosen\ChosenSelect::widget([
+        'items' => BooleanEnum::listData(),
+        'options' => [
+            'width' => '95%'
+        ]
+    ]);
+
+```
+
+Select Options 
+----------------
+You can find them on the [options page](http://harvesthq.github.io/chosen/options.html)
