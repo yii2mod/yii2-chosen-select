@@ -13,7 +13,7 @@ class ChosenSelectAsset extends AssetBundle
     /**
      * @var string
      */
-    public $sourcePath = '@app/widgets/chosen/assets';
+    public $sourcePath = '@vendor/yii2mod/chosen/assets';
 
     /**
      * @var array
