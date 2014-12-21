@@ -1,0 +1,18 @@
+{
+    "name": "yii2mod/yii2-chosen-select",
+    "description": "Chosen Select Widget based on Chosen jQuery plugin",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "module"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Igor Chepurnoy",
+            "email": "igorzfort@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "yii2mod\\chosen\\": ""
+        }
+    }
+}
