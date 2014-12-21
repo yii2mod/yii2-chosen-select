@@ -3,4 +3,4 @@
 #
 # Lines in this file are Regexps that are matched against the file
 # pathname.
-- ^uploads/.*$
+- ^assets/.*$
