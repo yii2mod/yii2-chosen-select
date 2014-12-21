@@ -28,10 +28,11 @@ Usage
 // Render form select:
    echo $form->field($model, 'subject')->widget(\yii2mod\chosen\ChosenSelect::className(),[
                     'items' => [
-                      'first' => 'First',
-                      'second' => 'Second'
+                        'first' => 'First',
+                        'second' => 'Second'
                     ],
                 ]); 
+
                 
 // Render default select
    echo \yii2mod\chosen\ChosenSelect::widget([
