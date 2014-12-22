@@ -2,11 +2,10 @@ Chosen Select Widget for Yii 2
 =========
 - Chosen Select Widget based on Chosen jQuery plugin [chosen](http://harvesthq.github.io/chosen)
 
-
 Installation
 ------------
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/). 
 
 Either run
 
