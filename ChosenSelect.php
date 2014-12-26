@@ -1,6 +1,6 @@
 <?php
 
-namespace app\widgets\chosen;
+namespace yii2mod\chosen;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
