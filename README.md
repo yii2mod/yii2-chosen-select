@@ -23,8 +23,8 @@ to the require section of your composer.json.
 
 Usage
 ------------
+1) Usage with ActiveForm and model
 ```php
-// Render form select:
    echo $form->field($model, 'subject')->widget(\yii2mod\chosen\ChosenSelect::className(),[
                     'items' => [
                         'first' => 'First',
@@ -32,15 +32,16 @@ Usage
                     ],
                 ]); 
 
-                
-// Render default select
+  ```
+  
+2) Usage without a model
+```php
    echo \yii2mod\chosen\ChosenSelect::widget([
         'items' => BooleanEnum::listData(),
         'options' => [
             'width' => '95%'
         ]
     ]);
-
 ```
 
 Select Options 
