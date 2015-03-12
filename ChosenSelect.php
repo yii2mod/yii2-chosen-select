@@ -1,6 +1,6 @@
 <?php
 
-namespace yii2mod\chosen;
+namespace app\widgets\chosen;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
@@ -48,9 +48,9 @@ class ChosenSelect extends InputWidget
     public function run()
     {
         if ($this->hasModel()) {
-            $this->renderFormSelect();
+            echo Html::activeDropDownList($this->model, $this->attribute, $this->items, $this->options);
         } else {
-            $this->renderBaseSelect();
+            echo Html::dropDownList($this->name, $this->value, $this->items, $this->options);
         }
         $this->registerAssets();
     }
@@ -83,21 +83,5 @@ class ChosenSelect extends InputWidget
     public function getSelectId()
     {
         return $this->options['id'];
-    }
-
-    /**
-     * Render default select without form
-     */
-    public function renderBaseSelect()
-    {
-        echo Html::dropDownList($this->name, $this->value, $this->items, $this->options);
-    }
-
-    /**
-     * Render form select
-     */
-    public function renderFormSelect()
-    {
-        echo Html::activeDropDownList($this->model, $this->attribute, $this->items, $this->options);
     }
 }
