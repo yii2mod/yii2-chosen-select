@@ -10,6 +10,9 @@
             "email": "igorzfort@gmail.com"
         }
     ],
+    "require": {
+        "bower-asset/ion.rangeSlider": "*"
+    },
     "autoload": {
         "psr-4": {
             "yii2mod\\chosen\\": ""

@@ -13,21 +13,21 @@ class ChosenSelectAsset extends AssetBundle
     /**
      * @var string
      */
-    public $sourcePath = '@vendor/yii2mod/yii2-chosen-select/assets';
+    public $sourcePath = '@bower/drmonty-chosen';
 
     /**
      * @var array
      */
     public $js = [
-        'chosen.jquery.js',
-        'chosen.proto.js',
+        'js/chosen.jquery.js',
+        'js/chosen.proto.js',
     ];
 
     /**
      * @var array
      */
     public $css = [
-        'chosen.css',
+        'css/chosen.css',
     ];
 
     /**
@@ -35,7 +35,6 @@ class ChosenSelectAsset extends AssetBundle
      * @var array
      */
     public $depends = [
-        'app\assets\AppAsset',
-        'yii\bootstrap\BootstrapAsset',
+        'yii\web\YiiAsset'
     ];
 }
