@@ -37,6 +37,7 @@ Usage
 2) Usage without a model
 ```php
    echo \yii2mod\chosen\ChosenSelect::widget([
+        'name'  => 'select',
         'items' => BooleanEnum::listData(),
         'options' => [
             'width' => '95%'
