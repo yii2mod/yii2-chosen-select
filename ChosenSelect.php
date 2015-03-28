@@ -62,7 +62,7 @@ class ChosenSelect extends InputWidget
     {
         $view = $this->getView();
         ChosenSelectAsset::register($view);
-        $js = '$("#' . $this->getSelectId() . '").chosen(' . $this->getPluginOptions() . ');';
+        $js = '$("#' . $this->getId() . '").chosen(' . $this->getPluginOptions() . ');';
         $view->registerJs($js, $view::POS_END);
     }
 
@@ -73,15 +73,5 @@ class ChosenSelect extends InputWidget
     public function getPluginOptions()
     {
         return Json::encode($this->pluginOptions);
-    }
-
-    /**
-     * Return select id
-     * @return mixed
-     * @throws InvalidConfigException
-     */
-    public function getSelectId()
-    {
-        return $this->options['id'];
     }
 }
