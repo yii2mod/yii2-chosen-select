@@ -2,7 +2,6 @@
 
 namespace yii2mod\chosen;
 
-use yii\base\InvalidConfigException;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
