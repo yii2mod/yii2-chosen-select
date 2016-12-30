@@ -15,10 +15,10 @@ use yii\widgets\InputWidget;
 class ChosenSelect extends InputWidget
 {
     /**
-     * @var array the HTML attributes for the input tag.
+     * @var array the HTML attributes for the input tag. In default it contains ['data-placeholder' => 'Please select...', 'multiple' => false]
      * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
      */
-    public $options = ['data-placeholder' => 'Please select...', 'multiple' => false];
+    public $options = [];
 
     /**
      * @var array select items
@@ -26,9 +26,9 @@ class ChosenSelect extends InputWidget
     public $items = [];
 
     /**
-     * @var array Plugin options
+     * @var array Plugin options. In default it contains ['width' => '100%']
      */
-    public $pluginOptions = ['width' => '100%'];
+    public $pluginOptions = [];
 
     /**
      * Initializes the object.
@@ -38,6 +38,16 @@ class ChosenSelect extends InputWidget
     public function init()
     {
         parent::init();
+
+		if(empty($this->options['data-placeholder'])) {
+            $this->options['data-placeholder'] = 'Please select...';
+        }
+		if(empty($this->options['multiple'])) {
+            $this->options['multiple'] = false;
+        }
+		if(empty($this->pluginOptions['width'])) {
+            $this->pluginOptions['width'] = '100%';
+        }
     }
 
     /**
