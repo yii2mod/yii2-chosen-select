@@ -3,6 +3,7 @@ Chosen Select Widget for Yii 2
 Chosen Select Widget based on Chosen jQuery plugin [chosen](http://harvesthq.github.io/chosen)
 
 [![Latest Stable Version](https://poser.pugx.org/yii2mod/yii2-chosen-select/v/stable)](https://packagist.org/packages/yii2mod/yii2-chosen-select) [![Total Downloads](https://poser.pugx.org/yii2mod/yii2-chosen-select/downloads)](https://packagist.org/packages/yii2mod/yii2-chosen-select) [![License](https://poser.pugx.org/yii2mod/yii2-chosen-select/license)](https://packagist.org/packages/yii2mod/yii2-chosen-select)
+[![Build Status](https://travis-ci.org/yii2mod/yii2-chosen-select.svg?branch=master)](https://travis-ci.org/yii2mod/yii2-chosen-select)
 
 Installation
 ------------
