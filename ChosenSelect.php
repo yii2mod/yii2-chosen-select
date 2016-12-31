@@ -7,52 +7,46 @@ use yii\helpers\Json;
 use yii\widgets\InputWidget;
 
 /**
- * Chosen Select Widget based on Chosen jQuery plugin {@link http://harvesthq.github.io/chosen)
- * @package yii2mod\chosen
+ * Yii2 wrapper for Chosen plugin {@link http://harvesthq.github.io/chosen)
  *
- * @author Igor Chepurnoy
+ * @author Igor Chepurnoy <chepurnoi.igor@gmail.com>
+ *
+ * @since 1.0
  */
 class ChosenSelect extends InputWidget
 {
-    /**
-     * @var array the HTML attributes for the input tag. In default it contains ['data-placeholder' => 'Please select...', 'multiple' => false]
-     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
-     */
-    public $options = [];
-
     /**
      * @var array select items
      */
     public $items = [];
 
     /**
-     * @var array Plugin options. In default it contains ['width' => '100%']
+     * @var array plugin options. By default it contains ['width' => '100%']
      */
     public $pluginOptions = [];
 
     /**
-     * Initializes the object.
-     * This method is invoked at the end of the constructor after the object is initialized with the
-     * given configuration.
+     * @inheritdoc
      */
     public function init()
     {
         parent::init();
 
-        if(empty($this->options['data-placeholder'])) {
+        if (empty($this->options['data-placeholder'])) {
             $this->options['data-placeholder'] = 'Please select...';
         }
-        if(empty($this->options['multiple'])) {
+
+        if (empty($this->options['multiple'])) {
             $this->options['multiple'] = false;
         }
-        if(empty($this->pluginOptions['width'])) {
+
+        if (empty($this->pluginOptions['width'])) {
             $this->pluginOptions['width'] = '100%';
         }
     }
 
     /**
-     * Render chosen select
-     * @return string|void
+     * @inheritdoc
      */
     public function run()
     {
@@ -71,24 +65,17 @@ class ChosenSelect extends InputWidget
     {
         $view = $this->getView();
         ChosenSelectAsset::register($view);
-        $js = '$("#' . $this->getInputId() . '").chosen(' . $this->getPluginOptions() . ');';
+        $js = '$("#' . $this->options['id'] . '").chosen(' . $this->getPluginOptions() . ');';
         $view->registerJs($js, $view::POS_END);
     }
 
     /**
      * Return plugin options in json format
+     *
      * @return string
      */
     public function getPluginOptions()
     {
         return Json::encode($this->pluginOptions);
-    }
-    
-    /**
-     * Return input id
-     */
-    public function getInputId()
-    {
-        return $this->options['id'];
     }
 }

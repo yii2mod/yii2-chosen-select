@@ -5,18 +5,21 @@ namespace yii2mod\chosen;
 use yii\web\AssetBundle;
 
 /**
- * Class ChosenSelectAsset
- * @package yii2mod\chosen
+ * ChosenSelectAsset bundle
+ *
+ * @author Igor Chepurnoy <chepurnoi.igor@gmail.com>
+ *
+ * @since 1.0
  */
 class ChosenSelectAsset extends AssetBundle
 {
     /**
-     * @var string
+     * @var string the directory that contains the source asset files for this asset bundle
      */
     public $sourcePath = '@bower/drmonty-chosen';
 
     /**
-     * @var array
+     * @var array list of JavaScript files that this bundle contains
      */
     public $js = [
         'js/chosen.jquery.js',
@@ -24,17 +27,16 @@ class ChosenSelectAsset extends AssetBundle
     ];
 
     /**
-     * @var array
+     * @var array list of CSS files that this bundle contains
      */
     public $css = [
         'css/chosen.css',
     ];
 
     /**
-     * Depends
-     * @var array
+     * @var array list of JavaScript files that this bundle contains
      */
     public $depends = [
-        'yii\web\YiiAsset'
+        'yii\web\YiiAsset',
     ];
 }

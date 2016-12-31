@@ -2,7 +2,11 @@
     "name": "yii2mod/yii2-chosen-select",
     "description": "Chosen Select Widget based on Chosen jQuery plugin",
     "type": "yii2-extension",
-    "keywords": ["yii2", "module"],
+    "keywords": [
+        "yii2",
+        "select",
+        "widget"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -13,6 +17,9 @@
     "require": {
         "yiisoft/yii2": "*",
         "bower-asset/drmonty-chosen": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "~2.0"
     },
     "autoload": {
         "psr-4": {
