@@ -39,13 +39,13 @@ class ChosenSelect extends InputWidget
     {
         parent::init();
 
-		if(empty($this->options['data-placeholder'])) {
+        if(empty($this->options['data-placeholder'])) {
             $this->options['data-placeholder'] = 'Please select...';
         }
-		if(empty($this->options['multiple'])) {
+        if(empty($this->options['multiple'])) {
             $this->options['multiple'] = false;
         }
-		if(empty($this->pluginOptions['width'])) {
+        if(empty($this->pluginOptions['width'])) {
             $this->pluginOptions['width'] = '100%';
         }
     }
