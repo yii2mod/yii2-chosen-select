@@ -38,7 +38,7 @@ class ChosenSelect extends InputWidget
         parent::init();
 
         if ($this->withPlaceHolder) {
-            if(!empty($this->options['prompt'])) {
+            if (!empty($this->options['prompt'])) {
                 $this->options['data-placeholder'] = $this->options['prompt'];
                 unset($this->options['prompt']);
             }
