@@ -26,14 +26,26 @@ class ChosenSelect extends InputWidget
     public $pluginOptions = [];
 
     /**
+     * @var bool Enable placeholder in Chosen plugin
+     */
+    public $withPlaceHolder = true;
+
+    /**
      * @inheritdoc
      */
     public function init()
     {
         parent::init();
 
-        if (empty($this->options['data-placeholder'])) {
-            $this->options['data-placeholder'] = 'Please select...';
+        if ($this->withPlaceHolder) {
+            if(!empty($this->options['prompt'])) {
+                $this->options['data-placeholder'] = $this->options['prompt'];
+                unset($this->options['prompt']);
+            }
+            if (empty($this->options['data-placeholder'])) {
+                $this->options['data-placeholder'] = 'Please select...';
+            }
+            $this->items = ['' => ''] + $this->items;
         }
 
         if (empty($this->options['multiple'])) {
