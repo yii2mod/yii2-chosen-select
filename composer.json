@@ -16,7 +16,7 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "bower-asset/drmonty-chosen": "*"
+        "bower-asset/drmonty-chosen": ">=1.4"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "~2.0"
@@ -25,5 +25,11 @@
         "psr-4": {
             "yii2mod\\chosen\\": ""
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }
