@@ -12,40 +12,42 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 Either run
 
-```
-php composer.phar require --prefer-dist yii2mod/yii2-chosen-select "*"
+```sh
+composer require yii2mod/yii2-chosen-select
 ```
 
 or add
 
 ```json
-"yii2mod/yii2-chosen-select": "*"
+"yii2mod/yii2-chosen-select": "^1.0"
 ```
 
 to the require section of your composer.json.
 
 Usage
 ------------
-1) Usage with ActiveForm and model
-```php
-   echo $form->field($model, 'subject')->widget(\yii2mod\chosen\ChosenSelect::className(),[
-                    'items' => [
-                        'first' => 'First',
-                        'second' => 'Second'
-                    ],
-                ]); 
 
-  ```
+1) Usage with ActiveForm and model
+
+```php
+echo $form->field($model, 'subject')->widget(\yii2mod\chosen\ChosenSelect::class, [
+    'items' => [
+        'first' => 'First',
+        'second' => 'Second'
+     ],
+]); 
+```
   
 2) Usage without a model
+
 ```php
-   echo \yii2mod\chosen\ChosenSelect::widget([
-        'name'  => 'select',
-        'items' => BooleanEnum::listData(),
-        'options' => [
-            'width' => '95%'
-        ]
-    ]);
+echo \yii2mod\chosen\ChosenSelect::widget([
+     'name'  => 'select',
+     'items' => BooleanEnum::listData(),
+     'options' => [
+         'width' => '95%'
+     ]
+ ]);
 ```
 
 Select Options 
